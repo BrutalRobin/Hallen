@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="Content/Style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <title>Hallen</title>
 </head>
+<div class="headermain">
 <header>
   <figure>
       <img src="images/logo.svg" alt=" logo">
@@ -22,30 +24,35 @@
       </ul>
   </nav>
 </header> 
+</div>
 <!-- Hero area-->
 <body>
 <div class="slideshow-container">
 
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <div class="gradient">
           <img src="Content/Media/Hal_02.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+          </div>
+          <div class="text">Dyrk noget sport yo'</div>
+          <div class="subtext">Kom og dyrk noget sport <br> eller se på nogle der gør.</div>
+        </div> 
+      
+        <div class="mySlides fade">
+          <div class="gradient">
+            <img src="Content/Media/Hal_01.jpg" style="width:100%">
+          </div>
+          <div class="text">Bagsiden af bygningen</div>
+          <div class="subtext">Fantastisk bagside</div>
         </div>
       
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="Content/Media/Hal_01.jpg" style="width:100%">
-          <div class="text">Caption Two</div>
+          <div class="gradient">
+            <img src="Content/Media/Hal_03.jpg" style="width:100%">
+          </div>
+          <div class="text">Verdensklasse skilt</div>
+          <div class="subtext">Slet ikke photoshoppet.</div>
         </div>
       
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="Content/Media/Hal_03.jpg" style="width:100%">
-          <div class="text">Caption Three</div>
-        </div>
-      
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
  <main class="ting"></main>
@@ -63,25 +70,25 @@
       <div class="footer_info">
           <span class="footer_title">NYTTIGE LINKS</span>
           <span>Kontakt</span>
-          <span>Fragt</span>
-          <span>Retur</span>
-          <span>Handelsbetingelser</span>
+          <span>Bolde</span>
+          <span>Påklædningsbetingelser</span>
+          <span>Brugsbetingelser</span>
           <span>Cookies</span>
       </div>
 
       <div class="footer_info">
-          <span class="footer_title">BRANDS</span>
-          <span>ZANEROBE</span>
-          <span>DOUCHEBAGS</span>
-          <span>KOMONO</span>
-          <span>RETROSUPERFUTURE</span>
+          <span class="footer_title">Faciliteter</span>
+          <span>Fodbold</span>
+          <span>Håndbold</span>
+          <span>Badminton</span>
+          <span>Tennis</span>
       </div>
 
       <div class="footer_info">
           <span class="footer_title">ADRESSE</span>
-          <span>Packyard</span>
-          <span>Elmegade 22</span>
-          <span>2200 København N</span>
+          <span>Aalborg</span>
+          <span>Sportsvej 22</span>
+          <span>9000 Aalborg</span>
           <span>CVR: 37 85 88 38</span>
       </div>
   </div>
@@ -91,12 +98,19 @@
 </footer>
     
 </body>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
-    $(window).scroll(function(){
-    $('header').toggleClass('solid', $(this).scrollTop() >500);
-    });
+$(window).scroll(function () {
+if ($(window).scrollTop() >= 20) {
+$('header').css('background-color','#a9afc2');
+} else {
+$('header').css('background-color','transparent');
+}
+});
     </script>
-    <script>var slideIndex = 0;
+    
+    <script>
+    var slideIndex = 0;
         showSlides();
         
         function showSlides() {
@@ -108,6 +122,6 @@
           slideIndex++;
           if (slideIndex > slides.length) {slideIndex = 1} 
           slides[slideIndex-1].style.display = "block"; 
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
+          setTimeout(showSlides, 5000);
         }</script>
 </html>

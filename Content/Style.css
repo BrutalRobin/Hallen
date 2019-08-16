@@ -2,20 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'PT Sans Caption', sans-serif;
 }
 
 /* ==========================================================================
  Header
   ========================================================================= */
+.headermain{
+  position: sticky;
+  background-color: transparent;
+  top: 0;
+  z-index: 500;
+}
+
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: 20% 1fr;
-  background-color: none;
   background-size: cover;
-  background-position: 0 -200px;
   height: 80px;
+  transition: background-color 1s ease 0s;
 }
 
 header .navigation {
@@ -30,14 +37,14 @@ header .navigation ul li {
 }
 
 header .navigation ul li a {
-  font-size: 1em;
+  font-size: 1.2em;
   text-decoration: none;
-  color: #2B2B2B;
+  color: whitesmoke;
   transition: color 200ms ease-in-out;
 }
 
 header .navigation ul li a:hover {
-  color: #FF7F4F;
+  color: #9acef2;
 }
 
 .hambruger {
@@ -115,16 +122,10 @@ header .navigation ul li a:hover {
   }
 }
 
-.solid{
-  background-color: #7a8391;
-}
-
-
-
 /* ==========================================================================
  Hero area
  ========================================================================== */
- * {box-sizing:border-box}
+* {box-sizing:border-box}
 
  .slideshow-container {
    overflow: hidden;
@@ -132,6 +133,7 @@ header .navigation ul li a:hover {
    height: 50vh;
    position: relative;
    margin: auto;
+   margin-top: -80px;
  }
  
  .mySlides {
@@ -139,69 +141,67 @@ header .navigation ul li a:hover {
  }
 
  .mySlides img{
-   margin-top: -300px;
+   position: relative;
+   margin-top: -500px;
+   z-index: -1;
+   display: block;
  }
- 
- .prev, .next {
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   width: auto;
-   margin-top: -22px;
-   padding: 16px;
-   color: white;
-   font-weight: bold;
-   font-size: 18px;
-   transition: 0.6s ease;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
+
+ .gradient{
+ display:inline-block;
+ width: 100%;
+ height: 100vh;
+ background: rgb(122,131,145);
+ background: linear-gradient(122deg, rgb(122, 131, 145) 0%, rgba(255,255,255,0) 100%);
  }
- 
- /* Position the "next button" to the right */
- .next {
-   right: 0;
-   border-radius: 3px 0 0 3px;
- }
- 
- .prev:hover, .next:hover {
-   background-color: rgba(0,0,0,0.8);
- }
- 
+
  .text {
-   color: #f2f2f2;
-   font-size: 15px;
-   padding: 8px 12px;
+  font-family: 'Anton', sans-serif;
+   color: #9acef2;
+   font-size: 70px;
+   padding: 8px 50px;
    position: absolute;
-   bottom: 8px;
+   top: 10vh;
    width: 100%;
-   text-align: center;
+   text-align: left;
  }
- 
- .numbertext {
+
+ .subtext { 
    color: #f2f2f2;
-   font-size: 12px;
-   padding: 8px 12px;
+   font-size: 20px;
+   padding: 8px 50px;
    position: absolute;
-   top: 0;
+   top: 20vh;
+   width: 100%;
+   text-align: left;
  }
  
  .fade {
-   -webkit-animation-name: fade;
-   -webkit-animation-duration: 1.5s;
-   animation-name: fade;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
    animation-duration: 1.5s;
+   -webkit-animation-duration: 1.5s;
  }
  
- @-webkit-keyframes fade {
-   from {opacity: .4} 
-   to {opacity: 1}
- }
- 
- @keyframes fade {
-   from {opacity: .4} 
-   to {opacity: 1}
- }
+ @-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+main{
+  height: 2000px;
+}
 
 /* ==========================================================================
 Footer
