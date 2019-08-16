@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Content/Style.css">
+</head>
+<body>
+    <section class="mainwrapper-form">
+    <form class="formvald">
+                <h2>Book en af vores mange forskellige baner til en hyggelig dag</h2>
+                <div>
+                    <input class="firstname" placeholder="Fulde navn" type="text" name="firstname" id="firstname">
+                </div>    
+                <div>
+                    <input type="email" placeholder="E-mail adresse" name="email" id="email">
+                    
+                    <span>
+                </div> 
+                <div>
+                    <input type="tel" placeholder="Telefon nummer" name="number" id="number">
+                </div>
+                <div>
+                        <input type="tel" placeholder="Antal personer" name="number" id="antal">
+                    </div> 
+                <div>
+                        <select class="selectbox" name="bane" id="bane">
+                            <option class="optiontext" value="">Vælg bane</option>
+                            <option class="optiontext" value="Fodbold bane">Fodbold bane</option>
+                            <option class="optiontext" value="Håndbold bane">Håndbold bane</option>
+                            <option class="optiontext" value="Tennis bane">Tennis bane</option>
+                            <option class="optiontext" value="Badminton bane">Badminton bane</option>
+                        </select>
+                    </div>  
+
+                        <div>
+                                <select class="selectbox" name="antalbaner" id="antalbaner">
+                                    <option class="optiontext" value="">Vælg antal baner</option>
+                                    <option class="optiontext" value="1">1</option>
+                                    <option class="optiontext" value="2">2</option>
+                                    <option class="optiontext" value="3">3</option>
+                                    <option class="optiontext" value="4">4</option>
+                                </select>
+                            </div>  
+                            <div>
+                                    <input type="date" placeholder="dato" name="date" id="date">
+                                </div>
+                    <button type="reset" id="clear">Ryd felter</button>
+                    <button type="button" id="send">Lej Bane</button>
+                </div>   
+
+        </form>
+    </section>
+    <script src="content/formjs.js"></script>
+</body>
+</html>
