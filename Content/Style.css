@@ -1,10 +1,24 @@
-.mainwrapper-form {
+.mainwrapper-kontakt {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
 }
 
-.formvald {
+.mainwrapper-book {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+.picwrapper{
+    grid-column: 2 / 6;
+}
+
+.formvald-kontakt {
     grid-column: 5 / 11;
+    color: #5882c0;
+}
+
+.formvald-book {
+    grid-column: 7 / 14;
     color: #5882c0;
 }
 
@@ -13,14 +27,22 @@
     margin: 20px 0 20px 25px;
 }
 
-input[type=text]{
+input[type=kommentar]{
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #b5d3f2;
+    height: 100px;
+}
+
+input[type=email]{
     width: 100%;
     margin: 5px;
     padding: 10px;
     border: 2px solid #b5d3f2;
 }
 
-input[type=email]{
+input[type=text]{
     width: 100%;
     margin: 5px;
     padding: 10px;
@@ -41,6 +63,15 @@ input[type=date]{
     border: 2px solid #b5d3f2;
     color: #b5d3f2;
     font-size: 1.1em;
+}
+
+.textarea-form{
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #b5d3f2;
+    color: #b5d3f2;
+    font-size: 1.4em;
 }
 
 label{

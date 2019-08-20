@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="Content/Style.css">
 </head>
 <body>
-    <section class="mainwrapper-form">
-    <form class="formvald">
+    <section class="mainwrapper-book">
+        <section class="picwrapper">
+        <img id="pic1" src="content/billeder/football field1523881888.8705.jpg" alt="#">
+    </section>
+    <form class="formvald-book">
                 <h2>Book en af vores mange forskellige baner til en hyggelig dag</h2>
                 <div>
                     <input class="firstname" placeholder="Fulde navn" type="text" name="firstname" id="firstname">
@@ -27,7 +30,7 @@
                 <div>
                         <select class="selectbox" name="bane" id="bane">
                             <option class="optiontext" value="">Vælg bane</option>
-                            <option class="optiontext" value="Fodbold bane">Fodbold bane</option>
+                            <option class="optiontext">Fodbold bane</option>
                             <option class="optiontext" value="Håndbold bane">Håndbold bane</option>
                             <option class="optiontext" value="Tennis bane">Tennis bane</option>
                             <option class="optiontext" value="Badminton bane">Badminton bane</option>
@@ -49,6 +52,8 @@
                     <button type="reset" id="clear">Ryd felter</button>
                     <button type="button" id="send">Lej Bane</button>
                 </div>   
+
+                <button onclick="document.getElementById('myImage').src='håndbold.png'">Turn on the light</button>
 
         </form>
     </section>
