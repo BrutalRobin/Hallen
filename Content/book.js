@@ -62,4 +62,4 @@ button.onclick = function() {
 
            //tjekker om den kan blive sendt eller om der er fejl
            alert('formularen blev afsendt')
-        }
+}
