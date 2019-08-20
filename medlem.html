@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Content/Style.css">
+    <title>Medlem</title>
+</head>
+<section class="mainwrapper-kontakt">
+<form class="formvald-medlem">
+        <h2>Bliv Medlem</h2>
+        <h3 class="h3medlem">MEDLEMSKAB OG PRISER:</h3>
+        <p class="p-medlem">Sport10+	halvt år: 500,- Eet år: 800,-</p>
+        <p class="p-medlem">Sport55+	halvt år: 800,- Eet år: 1200,-</p>
+        <div>
+            <input class="firstname" placeholder="Fulde navn" type="text" name="firstname" id="firstname">
+        </div>   
+        <div>
+                <input type="email" placeholder="E-mail adresse" name="email" id="email">
+            </div>
+            <div>
+                    <input type="tel" placeholder="Telefon nummer" name="number" id="number">
+                </div>
+        <div>
+                <input type="text" placeholder="Adresse" name="adresse" id="adresse">
+            </div> 
+            <div>
+                    <input type="text" placeholder="Postnummer og by" name="by" id="by">
+                </div> 
+        <div>
+                <select class="selectbox" name="bane" id="medlemskab">
+                    <option class="optiontext" value="">Vælg Medlemskab</option>
+                    <option class="optiontext">Sport10+</option>
+                    <option class="optiontext" value="Håndbold bane">Sport55+</option>
+                </select>
+            </div>  
+        <textarea class="textarea-form" rows="8" cols="50" name="comment" form="usrform">Skriv her...</textarea>
+        <div> 
+                <button type="reset" id="clear">Ryd felter</button>
+                <button type="button" id="send">Bliv medlem</button>
+        </form>
+    </section>
+    <script src="content/medlem.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ const button = document.getElementById('send');
 button.onclick = function() {
     const firstname = document.getElementById('firstname');
     if(firstname.value === '') {
-        alert('Feltet fornavn må ikke være tomt!')
+        alert('Feltet Fulde navn må ikke være tomt!')
         firstname.focus();
         return false;
     }
@@ -16,6 +16,7 @@ button.onclick = function() {
         email.focus();
         return false;
     }
+
     //tjek input:text felt nummer
     const number = document.getElementById('number');
     if(number.value === '') {
@@ -23,6 +24,7 @@ button.onclick = function() {
         number.focus();
         return false;
     }
+
     const antal = document.getElementById('antal');
     if(antal.value === '') {
         alert('Feltet Antal personer må ikke være tomt!')
@@ -51,6 +53,13 @@ button.onclick = function() {
         return false;
     }
 
-    //tjekker om den kan blive sendt eller om der er fejl
-    alert('formularen blev afsendt')
-}
+    const time = document.getElementById('time');
+    if(time.value === '') {
+        alert('Vælg tidspunkt')
+        time.focus();
+        return false;
+    }
+
+           //tjekker om den kan blive sendt eller om der er fejl
+           alert('formularen blev afsendt')
+        }

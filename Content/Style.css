@@ -8,8 +8,23 @@
     grid-template-columns: repeat(14, 1fr);
 }
 
-.picwrapper{
-    grid-column: 2 / 6;
+.mainwrapper-medlem {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+.formvald-medlem{
+    grid-column: 5 / 11;
+    color: #5882c0;
+}
+
+.h3medlem{
+    margin-left: 5%;
+}
+
+.p-medlem{
+    font-size: 1.2em;
+    margin-left: 5%;
 }
 
 .formvald-kontakt {
@@ -22,7 +37,21 @@
     color: #5882c0;
 }
 
-.formvald h2{
+.picwrapper{
+    grid-column: 2 / 6;
+}
+
+.formvald-medlem h2{
+    font-size: 2em;
+    margin-left: 5%;
+}
+
+.formvald-book h2{
+    font-size: 2em;
+    margin: 20px 0 20px 25px;
+}
+
+.formvald-kontakt h2{
     font-size: 2em;
     margin: 20px 0 20px 25px;
 }
@@ -57,6 +86,15 @@ input[type=tel]{
 }
 
 input[type=date]{
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #b5d3f2;
+    color: #b5d3f2;
+    font-size: 1.1em;
+}
+
+input[type=time]{
     width: 100%;
     margin: 5px;
     padding: 10px;
@@ -115,3 +153,31 @@ button{
     background-color: white;
     border: 2px solid #b5d3f2;
 }
+
+@media only screen and (max-width: 600px) {
+    .formvald-book {
+        grid-column: 3 / 13;
+        color: #5882c0;
+    }
+
+    .formvald-medlem {
+        grid-column: 3 / 13;
+        color: #5882c0;
+    }
+
+    .formvald-kontakt {
+        grid-column: 3 / 13;
+        color: #5882c0;
+    }
+
+    .picwrapper{
+        display: none;
+    }
+}
+
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+textarea:focus::-webkit-textarea-form { color:transparent; }
