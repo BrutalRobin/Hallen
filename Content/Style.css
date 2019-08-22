@@ -255,34 +255,34 @@ main{
 	grid-gap: 10px;
   }
   
-  .wrapper {
+  .wrapper-medlemskab {
 	display: flex;
 	flex-wrap: wrap;
   }
   
-  .wrapper {
+  .wrapper-medlemskab {
 	display: grid;
-  margin: auto;
+  margin: 0 8vw;
   margin-bottom: 50px;
-	grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   grid-auto-rows: minmax(250px, auto);
   grid-gap: 50px;
+  
   }
   
-  .panel {
+  .panel-medlemskab {
 	margin-left: 5px;
 	margin-right: 5px;
 	flex: 1 1 500px;
-	height: 300px;
+  height: 800px;
+  overflow: hidden;
 	content: contain;
 	background: rgb(138,252,255);
   background: linear-gradient(122deg, rgba(138,252,255,0.5494572829131652) 0%, rgba(169,175,194,1) 42%);
 	contain: cover;
 	display: flex;
-	justify-content: center;
-  align-items: bottom;
-  box-shadow: -8px 7px 6px rgba(0, 0, 0, 0.1); 
-  clip-path: polygon(4% 0, 96% 0, 100% 10%, 100% 89%, 97% 100%, 4% 100%, 0 89%, 0 12%);
+  box-shadow: -8px 7px 6px rgba(0, 0, 0, 0.1);
+  
   }
 
   @supports (display: grid) {
@@ -295,36 +295,36 @@ main{
   filter: drop-shadow(-7px 7px 5px rgba(0, 0, 0, 1));
 }
 
-.figure img{
+.figure-medlemskab img{
   margin-top: -13px;
-  width: 800px;
+  width: 100%;
   height: 326px;
-  clip-path: polygon(42% 0, 52% 53%, 41% 100%, 8% 100%, 17% 51%, 8% 0);
+  clip-path: polygon(100% 0, 100% 42%, 50% 61%, 0 42%, 0 0, 50% 18%);
 }
 
 figure h2,
 figure h4 {
 margin: 0;
 }
-figure h2 {
+.figure-medlemskab h2 {
 text-transform: uppercase;
 font-size: 2.5em;
-font-family: 'PT Sans Caption', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+margin-top: -5vw;
 font-weight: 800;
 color: #000000;
-writing-mode: vertical-rl;
-margin-top: -280px;
-margin-left: -180px;
 text-align: center;
+padding-bottom: 20px;
 }
-figure h4 {
+.figure-medlemskab h4 {
 display: grid;
-margin-left: 450px;
-margin-top: -200px;
 font-weight: 700;
-padding: 5px;
+padding-left: 30px;
+padding-right: 30px;
 color: #000000;
-font-size: 1em;
+font-size: calc(6px + (18 - 6) * ((100vw - 300px) / (1600 - 300))); 
+font-family: 'Open Sans Condensed', sans-serif;
+vertical-align: middle;
 }
 
 figure a {
@@ -333,6 +333,13 @@ top: 0;
 bottom: 0;
 left: 0;
 right: 0;
+}
+
+.figure-medlemskab h3{
+display: grid;
+padding-left: 30px;
+font-size: 2em;
+font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* ==========================================================================
