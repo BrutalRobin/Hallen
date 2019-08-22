@@ -714,6 +714,10 @@ Footer
   display: block;
 }
 
+.footer_info span a {
+  text-decoration: none;
+}
+
 .footer_title {
   font-weight: bold;
 }
