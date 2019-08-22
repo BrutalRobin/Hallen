@@ -440,7 +440,9 @@ main{
   top: -300px;
 	max-width: 90%;
 	margin: 0 20px;
-	grid-gap: 10px;
+  grid-gap: 10px;
+  display: flex;
+	flex-wrap: wrap;
   }
   
   .wrapper-medlemskab {
@@ -456,6 +458,15 @@ main{
   grid-auto-rows: minmax(250px, auto);
   grid-gap: 50px;
   }
+
+  .wrapper{
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(80% 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    grid-gap: 50px;
+  }
   
   .panel-medlemskab {
 	margin-left: 5px;
@@ -469,13 +480,27 @@ main{
 	contain: cover;
 	display: flex;
   box-shadow: -8px 7px 6px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: 150px 20% 10% 70%;
-	justify-content: center;
-  align-items: bottom;
-  clip-path: polygon(4% 0, 96% 0, 100% 10%, 100% 89%, 96% 100%, 4% 100%, 0 89%, 0 12%);
-
   }
+
+  .panel {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 500px;
+    height: 300px;
+    overflow: hidden;
+    content: contain;
+    background: rgb(138,252,255);
+    background: linear-gradient(122deg, rgba(138,252,255,0.5494572829131652) 0%, rgba(205, 208, 221, 0.87) 42%);
+    contain: cover;
+    display: flex;
+    box-shadow: -8px 7px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 150px 20% 10% 70%;
+    justify-content: center;
+    align-items: bottom;
+    clip-path: polygon(4% 0, 96% 0, 100% 10%, 100% 89%, 96% 100%, 4% 100%, 0 89%, 0 12%);
+  
+    }
 
   @supports (display: grid) {
 	.wrapper > * {
@@ -509,10 +534,6 @@ main{
   transition: 300ms ease-in-out;
 }
 
-.visit{
-  transform: translateX(2000px)
-}
-
 @keyframes seehere {
   0% {
 transform: translateX(0)
@@ -525,8 +546,6 @@ transform: translateX(0)
     transform: translateX(0)
   }
 }
-
-
 
 figure h2,
 figure h4 {
