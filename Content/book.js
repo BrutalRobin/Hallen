@@ -14,19 +14,22 @@ button.onclick = function() {
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     
     if (!filter.test(email.value)) {
-    alert('Please provide a valid email address');
+    alert('Venligst brug en rigtig email');
     email.focus;
     return false;
     }
 
     //tjek input:text felt nummer
     const number = document.getElementById('number');
-    if(number.value === '') {
-        alert('Feltet Telefon nummer må ikke være tomt!')
-        number.focus();
-        return false;
+    var val = number.value
+    if (/^\d{8}$/.test(val)) {
+        // value is ok, use it
+    } else {
+        alert("Forkert nummer, nummeret skal være 8 tal")
+        number.focus()
+        return false
     }
-
+    
     const antal = document.getElementById('antal');
     if(antal.value === '') {
         alert('Feltet Antal personer må ikke være tomt!')
